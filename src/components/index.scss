@@ -1,0 +1,96 @@
+@import '../style/variables.scss';
+@import '../style/flexBox.scss';
+
+.card-handler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: $base-2 0 $base-2 0;
+
+    &_text {
+        font-weight: bold !important;
+        margin-right: $base-3 !important;
+        font-size: $base-3 !important;
+
+        @media screen and (max-width: 425px) {
+            margin-right: 0 !important;
+        }
+    }
+
+    &_search-holder {
+        border: 1px solid #ded8d8;
+        display: flex;
+
+        @media screen and (max-width: 425px) {
+            margin-bottom: $base;
+            width: 100%;
+        }
+    }
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 425px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        flex-wrap: wrap;
+    }
+}
+
+.card-holder {
+    margin: $base-4 0 $base-2 0;
+
+    &-header {
+        span {
+            font-size: $base-3;
+            font-weight: bold;
+
+            @media screen and (max-width: 425px) {
+                font-size: $base-2;
+            }
+        }
+    }
+
+    .card-content {
+        display: flex;
+        justify-content: space-between;
+        &-right{
+            margin-left: 30%;
+        }
+        @media screen and (max-width: 425px) {
+            flex-wrap: wrap;
+            &-right{
+                margin-left: 0;
+            }
+            &>div {
+                margin-bottom: $base;
+            }
+        }
+    }
+}
+
+.create-ticket-modal {
+    &_button {
+        @media screen and (max-width: 425px) {
+            width: 100%;
+        }
+
+        @media (min-width: 425px) and (max-width: 900px) {
+            width: 100%;
+            margin-top: $base-2 !important;
+        }
+    }
+
+    &-input {
+        width: 100%;
+    }
+
+    &-submit {
+        width: 100%;
+        margin-top: $base !important;
+    }
+}

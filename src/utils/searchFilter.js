@@ -1,0 +1,1 @@
+export const filterDataBySearchInput = (data, searchInput) => searchInput ? data.filter(item => item.title.includes(searchInput)) : data;
